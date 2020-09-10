@@ -28,6 +28,18 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
+burger.discount = function(type) {
+  if (type === "teacher" || type === "student") {
+    return this.price * .75;
+  } else if (type === "public") {
+    return this.price * .90;
+  } else {
+    return "Not a valid input";
+  }
+}
+
+console.log(burger.discount("teacher"));
+console.log(burger.discount("public"));
 
 
 ///////////////Reviews (MVP)///////////////////
